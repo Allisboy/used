@@ -57,13 +57,14 @@ export const useAuthStore = defineStore("auth", {
           fullname,
         });
         this.user = signup;
-        const userModal = User.init(authService.databases);
+        const userModal =new User();
         // console.log(signup)
       const userTable=  userModal.create({
           fullname: fullname,
         },signup.userId
     );
         this.success = "Successfully registered!";
+this.fetchUser()
         return signup;
       } catch (error) {
         this.user = null;
