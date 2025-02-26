@@ -61,7 +61,7 @@ export const useAuthStore = defineStore("auth", {
         // console.log(signup)
       const userTable=  userModal.create({
           fullname: fullname,
-        },signup.userId
+        },signup.$id
     );
         this.success = "Successfully registered!";
 this.fetchUser()
